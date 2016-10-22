@@ -75,16 +75,16 @@ class NasdaqRegistry
     if (!isset($this->securities[$symbol])) {
 
       // create a new Id
-			$this->lastId = ($this->lastId + 1);
+      $this->lastId = ($this->lastId + 1);
 
       // compose row
-			$row = array('id' => $this->lastId,'symbol' => $symbol, 'active' => 1);
+      $row = array('id' => $this->lastId,'symbol' => $symbol, 'active' => 1);
 			
-			// add to indexes
-			$this->securities[$symbol] = $row;
-			$this->index[$this->lastId] = $row;
+      // add to indexes
+      $this->securities[$symbol] = $row;
+      $this->index[$this->lastId] = $row;
 			
-			return true;
+      return true;
 
     } else {
       return false;
